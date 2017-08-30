@@ -1,0 +1,1 @@
+// viikko 35 tehtävä 1

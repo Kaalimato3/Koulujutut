@@ -6,9 +6,9 @@ using std::cout; using std::cin; using std::endl;
 
 int main()
 {
-	int arvosana, arvosanat[6];
-	int summa, opmaara = 0;
-	float ka;
+	int arvosana = 0, arvosanat[6] = { 0 };
+	int summa = 0, opmaara = 0;
+	double ka;
 
 	while (arvosana > -1)
 	{
@@ -34,7 +34,7 @@ int main()
 		summa += arvosanat[i] * i;
 	}
 
-	ka = summa / opmaara;
+	ka = (double) summa / opmaara;
 
 	for (int i = 0; i < 6; i++)
 	{
@@ -43,9 +43,12 @@ int main()
 		{
 			cout << "*";
 		}
+		cout << endl;
 	}
 
 	cout << endl;
+
+	cout << "Oppilaiden maara: " << opmaara << " Summa: " << summa << " Keskiarvo: " << ka << endl;
 
 	system("pause");
 	return 0;

@@ -15,12 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Paivays.h">
+    <ClInclude Include="..\t1\Paivays.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Paivays.cpp">
+    <ClCompile Include="..\t1\Paivays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainPaivays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

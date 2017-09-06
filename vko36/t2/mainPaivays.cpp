@@ -5,21 +5,11 @@ using std::cout; using std::cin; using std::endl;
 
 int main()
 {
-	Paivays tanaan;
-	int syote;
+	Paivays tanaan, huomenna;
 
-	cout << "Anna paiva: ";
-	cin >> syote;
-	tanaan.asetaPaiva(syote);
-
-
-	cout << "Anna kuukausi: ";
-	cin >> syote;
-	tanaan.asetaKuukausi(syote);
-
-	cout << "Anna vuosi: ";
-	cin >> syote;
-	tanaan.asetaVuosi(syote);
+	tanaan.asetaPaiva(6);
+	tanaan.asetaKuukausi(9);
+	tanaan.asetaVuosi(2017);
 
 	cout << tanaan.annaKuukausi() << "/" << tanaan.annaPaiva() << "/" << tanaan.annaVuosi() << endl;
 

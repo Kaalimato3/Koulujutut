@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2764433F-4745-4F76-815F-9B80DDE88605}</ProjectGuid>
-    <RootNamespace>t1</RootNamespace>
+    <ProjectGuid>{EF248F14-C081-4DE8-8A98-B747070A4B9C}</ProjectGuid>
+    <RootNamespace>t2</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,10 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Paivays.h" />
+    <ClInclude Include="..\t1\Paivays.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Paivays.cpp" />
+    <ClCompile Include="..\t1\Paivays.cpp" />
+    <ClCompile Include="mainPaivays.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

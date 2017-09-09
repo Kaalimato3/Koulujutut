@@ -1,0 +1,78 @@
+
+
+Kortit
+
+Kortteja on yhteensä 120.
+Kortteja on neljänlaisia: 
+	-Henkilökortit:
+		11 erityyppistä (yhteensä 55):
+		10x Trader (2 jokaiselle laivavärille)
+		5x Settler (Questien tekemiseen)
+		5x Captain -||-
+		5x Priest -||-
+		3x Jack of all trades -||-
+		10x Sailor (yksi miekka, joilla häätää laivoja)
+		3x Pirate (kaksi miekkaa, joilla häätää laivoja)
+		4x Mademoiselle (henkilöt maksavat yhden vähemmän)
+		5x Jester (tuottaa kolikoita kun satamassa nolla korttia)
+		6x Admiral (tuottaa rahaa kun satamassa yli 5 korttia)
+		4x Governor (lisää toimintoja jokaisella vuorolla)
+	-Quest-kortit:
+		yhteensä 6
+		kaikki erityyppisiä
+		Ominaisuukset: Voittopisteet, rahapalkkio, tarvittavat henkilöt (n x Settler, n x Captain, n x Priest)
+		Jos 5 pelaajaa niin yksi ylimääräinen Quest-kortti
+	-Verotuskortit
+		-yhteensä 4
+		Jos pelaajalla yli 12 kolikkoa, maksaa puolet pois.
+		Kahdenlaisia:
+			-Pelaaja(t) jo(i)lla eniten miekkoja saa yhden rahan (2x)
+			-Pelaaja(t) jo(i)lla vähiten voittopisteitä saa yhden rahan (2x)
+	-Laivakortit
+		-5 eriväristä (yhteensä 50)
+			-10x Sinisiä (Flute) 1 2 5
+			-10x Keltaisia (Pinace) 1 2 4
+			-10x Vihreitä (Skiff) 1 3 5
+			-10x Punaisia (Frigate) 1 3 6 kallo
+			-10x Mustia (Galleon) 2 4 7 kallo
+		-Jokaisella laivalla väri (joka ylemmistä), arvo (1-4), miekat (riippuu väristä)
+	
+Pelaajat
+Oletuksena max 5 pelaajaa.
+Pelaajan tiedot:
+	-rahamäärä
+	-henkilökortit
+		-Pirate- ja Sailor- korttien yhteenlasketut miekat
+	-Tehdyt Quest-kortit
+	-Voittopisteet (voidaan laskea henkilö- ja Quest- korttien avulla)
+	-Henkilökorttien erikoistoiminnot
+		-Mademoiselle, Jester, Admiral, Governor, Trader
+	
+Vuoron rakenne
+
+Nosto-osio
+Vuorossa olevan pelaajan satamaan nostetaan kortteja niin kauan kun pelaaja niitä haluaa nostaa tai satamassa on kaksi samanväristä laivaa.
+Verokortin tullessa ne pelaajat joilla on yli 12 rahaa maksavat puolet pois, pyöristyen alaspäin.
+Laivan tullessa vuorossa oleva pelaaja voi häätää sen jos hänellä on tarpeeksi miekkoja.
+Quest-kortit menevät sivuun, jolloin niitä voi suorittaa.
+
+Osto-osio
+
+Laivat voidaan myydää rahaa vasten ja henkilökortit voidaan ostaa rahalla.
+Satamassa olevia kortteja ostetaan, aloittaen vuorossaolevasta pelaajasta, siirtyen vuorojärjestyksen mukaisesti kaikki pelaajat läpi.
+Muut pelaajat maksavat vuorossa olevalle pelaajalle yhden rahan jokaisesta kortista minkä myyvät tai ostavat satamasta.
+Kun kaikki ovat saaneet ostokset tehtyä, alkaa uusi vuoro.
+
+
+Pakka
+Lista kaikista korteista, mitkä eivät ole pöydällä (Pelaajien henkilökortit ja Quest-kortit)
+
+Tietorakenne:
+
+Peli
+Sisältää Pelaajat
+Pelaajat
+	-Rahamäärä (int)
+	-Kortit (Vector Kortti-tyypeistä)
+	-Miekat (int)
+	-Voittopisteet (int)

@@ -5,7 +5,7 @@ Kortit
 Kortteja on yhteensä 120.
 Kortteja on neljänlaisia: 
 	-Henkilökortit:
-		11 erityyppistä (yhteensä 55):
+		11 erityyppistä (yhteensä 60):
 		10x Trader (2 jokaiselle laivavärille)
 		5x Settler (Questien tekemiseen)
 		5x Captain -||-

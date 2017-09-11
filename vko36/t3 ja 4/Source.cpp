@@ -1,8 +1,6 @@
 #include "Kellonaika.h"
 #include <iostream>
 #include <Windows.h>
-#include <math.h>
-#include <time.h>
 
 using std::cout; using std::endl;
 

@@ -3,6 +3,10 @@
 class Kellonaika
 {
 public:
+
+	Kellonaika();
+	Kellonaika(int ss, int mm, int hh);
+
 	int getHours();
 	int getMins();
 	int getSecs();

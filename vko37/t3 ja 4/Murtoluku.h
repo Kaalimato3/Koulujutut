@@ -5,7 +5,7 @@ class Murtoluku
 public:
 	void kysyTiedot();
 	void print();
-	void sievenna();
+	int sievenna();
 
 	// setters:
 	void setDenom(int n);

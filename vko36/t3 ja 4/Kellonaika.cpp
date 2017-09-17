@@ -3,6 +3,20 @@
 
 using std::cout; using std::endl; using std::cin;
 
+Kellonaika::Kellonaika()
+{
+	ss_ = 0;
+	mm_ = 0;
+	hh_ = 0;
+}
+
+Kellonaika::Kellonaika(int hh, int mm, int ss)
+{
+	ss_ = ss;
+	mm_ = mm;
+	hh_ = hh;
+}
+
 int Kellonaika::getHours()
 {
 	return hh_;
@@ -46,7 +60,7 @@ void Kellonaika::setTime(int hh, int mm, int ss)
 
 void Kellonaika::printTime()
 {
-	cout << endl << hh_ << ":" << mm_ << ":" << ss_ << endl;
+	cout << hh_ << ":" << mm_ << ":" << ss_ << endl;
 }
 
 void Kellonaika::stepSecs(int ss)

@@ -7,34 +7,37 @@ double function(double x, int y);
 
 int main()
 {
-	char k;
-	int kerroin = 0;
+	int kerroin = -2;
 
-	for (double i = 0; i < 1; i += 0.01)
+	for (int i = 0; i < 101; i++)
 	{
-		cout << i << " " << function(i, kerroin)i << endl;
+		cout << (double)i * 0.01 << "\t" << function((double) i * 0.01, kerroin) << endl;
 	}
 
-	cin >> k;
+	system("pause");
 	return 0;
 }
 
 double function(double x, int y)
 {
-	if (y == 0)
-		return x;
+	double offsetX;
+	double offsetY;
 
 	if (y > 0)
 	{
-
-		return -(sqrt(y - pow(x + ( (sqrt(2 * y - 1) - 1) / 2), 2) ) ) + (sqrt(y * 2 - 1) ) / 2 + 1 / 2 ;
+		offsetX = ((sqrt(y * 2 - 1) - 1) / 2);
+		offsetY = ((sqrt(y * 2 - 1) / 2) + 0.5);
+		return -(sqrt(y - (pow(x + offsetX, 2) ) ) ) + offsetY ;
 	}
 
 	if (y < 0)
 	{
+		y = -y;
+		offsetX = (-(sqrt(y * 2 - 1) + 1 ) / 2);
+		offsetY = (-(sqrt(y * 2 - 1) - 1 ) / 2);
+		return sqrt(y - (pow(x + offsetX, 2))) + offsetY;
 
-		return sqrt(y - pow(x + ( -(sqrt(2 * y - 1) - 1) / 2), 2)) - (sqrt(y * 2 - 1)) / 2 + 1 / 2 ;
 	}
 
-	
+	return x;
 }

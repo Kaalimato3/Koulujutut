@@ -59,5 +59,5 @@ void Opiskelija::asetaEmail(string email)
 
 void Opiskelija::tulosta()
 {
-	cout << num_ << " " << enimi_ << " " << snimi_ << " " << email_ << endl;
+	cout << num_ << "\t" << enimi_ << "\t" << snimi_ << "\t" << email_ << endl;
 }

@@ -6,6 +6,8 @@ public:
 
 	Kellonaika();
 	Kellonaika(int ss, int mm, int hh);
+	Kellonaika(const Kellonaika & alkup);
+	~Kellonaika();
 
 	int getHours();
 	int getMins();

@@ -3,18 +3,24 @@
 
 using std::cout; using std::endl; using std::cin;
 
-Kellonaika::Kellonaika()
+Kellonaika::Kellonaika() : hh_(0), mm_(0), ss_(0)
 {
-	ss_ = 0;
-	mm_ = 0;
-	hh_ = 0;
+	
 }
 
-Kellonaika::Kellonaika(int hh, int mm, int ss)
+Kellonaika::Kellonaika(int hh, int mm, int ss) : hh_(hh), mm_(mm), ss_(ss)
 {
-	ss_ = ss;
-	mm_ = mm;
-	hh_ = hh;
+
+}
+
+Kellonaika::Kellonaika(const Kellonaika & alkup) : hh_(alkup.hh_), mm_(alkup.mm_), ss_(alkup.ss_)
+{
+
+}
+
+Kellonaika::~Kellonaika()
+{
+
 }
 
 int Kellonaika::getHours()

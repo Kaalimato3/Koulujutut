@@ -23,14 +23,14 @@ public:
 
 	// getters: (lukurutiinit)
 
-	int annaPaiva();
-	int annaKuukausi();
-	int annaVuosi();
+	int annaPaiva() const;
+	int annaKuukausi() const;
+	int annaVuosi() const;
 
 
-	void tulosta();
+	void tulosta() const;
 	void lisaaPaiva();
-	int montakoPaivaaKuukaudessa();
+	int montakoPaivaaKuukaudessa() const;
 
 private:
 

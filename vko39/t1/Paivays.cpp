@@ -20,11 +20,12 @@ Paivays::Paivays(int vuosi, int kk, int paiva) : pp_(paiva), kk_(kk), vv_(vuosi)
 Paivays::~Paivays()
 // Oletuspurkaja
 {
+	tulosta();
 	cout << "Paivays: Oletuspurkaja" << endl;
 	system("pause");
 }
 
-Paivays::Paivays(const Paivays & alkup)
+Paivays::Paivays(const Paivays & alkup) : pp_(alkup.pp_), kk_(alkup.kk_), vv_(alkup.vv_)
 // Kopiorakentaja
 {
 	cout << "Paivays: Kopiorakentaja" << endl;
@@ -49,23 +50,23 @@ void Paivays::asetaVuosi(int vuosi)
 
 // getterit
 
-int Paivays::annaPaiva()
+int Paivays::annaPaiva() const
 {
 	return pp_;
 }
 
-int Paivays::annaKuukausi()
+int Paivays::annaKuukausi() const
 {
 	return kk_;
 }
 
-int Paivays::annaVuosi()
+int Paivays::annaVuosi() const
 {
 	return vv_;
 }
 
 
-void Paivays::tulosta()
+void Paivays::tulosta() const
 {
 	cout << pp_ << "." << kk_ << "." << vv_ << endl;
 }
@@ -85,7 +86,7 @@ void Paivays::lisaaPaiva()
 	}
 }
 
-int Paivays::montakoPaivaaKuukaudessa()
+int Paivays::montakoPaivaaKuukaudessa() const
 {
 	if (kk_ == 1 || kk_ == 3 || kk_ == 5 || kk_ == 7 || kk_ == 8 || kk_ == 10 || kk_ == 12)
 		return 31;

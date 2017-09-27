@@ -111,6 +111,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Kalenterimerkinta.h" />
+    <ClInclude Include="Kellonaika.h" />
+    <ClInclude Include="Paivays.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Kalenterimerkinta.cpp" />
+    <ClCompile Include="Kellonaika.cpp" />
+    <ClCompile Include="Paivays.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,7 +24,7 @@ Kellonaika::~Kellonaika()
 {
 
 	cout << "Kellonaika: Oletuspurkaja" << endl;
-	system("pause");
+	//system("pause");
 }
 
 int Kellonaika::annaTunnit() const

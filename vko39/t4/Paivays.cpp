@@ -20,9 +20,8 @@ Paivays::Paivays(int vuosi, int kk, int paiva) : pp_(paiva), kk_(kk), vv_(vuosi)
 Paivays::~Paivays()
 // Oletuspurkaja
 {
-	tulosta();
 	cout << "Paivays: Oletuspurkaja" << endl;
-	system("pause");
+	//system("pause");
 }
 
 Paivays::Paivays(const Paivays & alkup) : pp_(alkup.pp_), kk_(alkup.kk_), vv_(alkup.vv_)

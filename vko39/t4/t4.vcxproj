@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="Kalenterimerkinta.cpp" />
     <ClCompile Include="Kellonaika.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Paivays.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -43,4 +43,6 @@ private:
 
 };
 
-//#endif
+/*
+#endif // tämä jos muussa kuin visual ympäristössä
+*/

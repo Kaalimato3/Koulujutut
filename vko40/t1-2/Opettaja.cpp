@@ -36,7 +36,7 @@ string Opettaja::annaOpetusala() const
 void Opettaja::tulosta() const
 {
 	Tyontekija::tulosta();
-	cout << opetusala_ << " ";
+	cout << opetusala_ << endl;
 }
 
 void Opettaja::kysyTiedot()

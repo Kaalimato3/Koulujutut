@@ -69,7 +69,7 @@ void Henkilo::tulosta() const
 
 void Henkilo::kysyTiedot()
 {
-	cout << endl << "Anna etunimi: ";
+	cout << "Anna etunimi: ";
 	getline(cin, etunimi_);
 	cout << "Anna sukunimi: ";
 	getline(cin, sukunimi_);

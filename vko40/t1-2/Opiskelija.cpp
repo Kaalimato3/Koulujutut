@@ -43,5 +43,5 @@ void Opiskelija::kysyTiedot()
 void Opiskelija::tulosta() const
 {
 	Henkilo::tulosta();
-	cout << opiskelijanumero_ << " ";
+	cout << opiskelijanumero_ << endl;
 }

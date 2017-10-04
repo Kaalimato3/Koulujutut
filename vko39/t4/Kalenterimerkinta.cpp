@@ -87,4 +87,17 @@ void Kalenterimerkinta::tulostaMerkinta() const
 
 void Kalenterimerkinta::kysyTiedot()
 {
+	string muistutus;
+	pvm_.kysyPvm();
+	aika_.kysyAika();
+	cin.clear();
+	cout << "Anna asia: ";
+	getline(cin, asia_);
+	cout << "Haluatko muistutuksen? (K/E)";
+	getline(cin, muistutus);
+	if (muistutus == "K" || muistutus == "k")
+		muistutus_ = true;
+	else
+		muistutus_ = false;
+
 }

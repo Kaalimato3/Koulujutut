@@ -1,7 +1,7 @@
 #include "Paivays.h"
 #include <iostream>
 
-using std::cout; using std::endl;
+using std::cout; using std::endl; using std::cin;
 
 // public
 
@@ -95,6 +95,16 @@ int Paivays::montakoPaivaaKuukaudessa() const
 		return 29; // karkausvuoden helmikuu
 	else
 		return 28;
+}
+
+void Paivays::kysyPvm()
+{
+	cout << "Anna vuosi: ";
+	cin >> vv_;
+	cout << "Anna kuukausi: ";
+	cin >> kk_;
+	cout << "Anna paiva: ";
+	cin >> pp_;
 }
 
 // private:

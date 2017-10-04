@@ -31,6 +31,7 @@ public:
 	void tulosta() const;
 	void lisaaPaiva();
 	int montakoPaivaaKuukaudessa() const;
+	void kysyPvm();
 
 private:
 

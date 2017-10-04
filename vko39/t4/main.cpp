@@ -4,8 +4,9 @@
 
 int main()
 {
-	Kalenterimerkinta kal(Paivays(2017, 9, 27), Kellonaika(35, 53, 13), "ebin suprdo", true);
+	Kalenterimerkinta kal;
 
+	kal.kysyTiedot();
 	kal.tulostaMerkinta();
 
 	system("pause");

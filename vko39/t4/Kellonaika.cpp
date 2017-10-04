@@ -78,6 +78,12 @@ void Kellonaika::askellaSekunteja(int ss)
 
 void Kellonaika::kysyAika()
 {
+	cout << "Anna tunnit: ";
+	cin >> hh_;
+	cout << "Anna minuutit: ";
+	cin >> mm_;
+	cout << "Anna sekunnit: ";
+	cin >> ss_;
 }
 
 void Kellonaika::tarkistaYlivuoto()

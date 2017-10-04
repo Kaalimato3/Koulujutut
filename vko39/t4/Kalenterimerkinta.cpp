@@ -91,7 +91,7 @@ void Kalenterimerkinta::kysyTiedot()
 	pvm_.kysyPvm();
 	aika_.kysyAika();
 	cin.clear();
-	cout << "Anna asia: ";
+	cout << "Anna asia: \n";
 	getline(cin, asia_);
 	cout << "Haluatko muistutuksen? (K/E)";
 	getline(cin, muistutus);

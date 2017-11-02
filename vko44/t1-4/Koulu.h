@@ -27,6 +27,8 @@ public:
 	void tulostaKoulutusohjelmanOpiskelijat() const;
 
 	void poistaKoulutusohjelma();
+	void poistaOpettaja();
+	void poistaOpiskelija();
 
 	int etsiKoulutusohjelma() const;
 

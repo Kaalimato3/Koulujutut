@@ -23,8 +23,11 @@ void Sovellus::aja() const
 		valinta = tulostaValikko();
 
 
+		if(valinta == "0")
+		{
 
-		if (valinta == "1")
+		}
+		else if (valinta == "1")
 		{
 			koulu.lisaaKoulutusohjelma();
 		}
@@ -54,15 +57,15 @@ void Sovellus::aja() const
 		}
 		else if (valinta == "8")
 		{
-
+			koulu.poistaKoulutusohjelma();
 		}
 		else if (valinta == "9")
 		{
-
+			koulu.poistaOpettaja();
 		}
 		else if (valinta == "10")
 		{
-
+			koulu.poistaOpiskelija();
 		}
 		else if (valinta == "11")
 		{
@@ -84,6 +87,8 @@ void Sovellus::aja() const
 		{
 
 		}
+		else
+			cout << "Virheellinen syöttö" << endl;
 	}
 
 }

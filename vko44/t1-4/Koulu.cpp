@@ -87,6 +87,34 @@ void Koulu::tulostaKoulutusohjelmanOpiskelijat() const
 		cout << "Koulutuohjelmaa ei löytynyt" << endl;
 }
 
+void Koulu::poistaKoulutusohjelma()
+{
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi >= 0)
+		koulutusohjelmat_.erase(koulutusohjelmat_.begin() + indeksi);
+	else
+		cout << "Koulutuohjelmaa ei löytynyt" << endl;
+
+}
+
+void Koulu::poistaOpettaja()
+{
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi >= 0)
+		koulutusohjelmat_[indeksi].poistaOpettaja();
+	else
+		cout << "Koulutuohjelmaa ei löytynyt" << endl;
+}
+
+void Koulu::poistaOpiskelija()
+{
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi >= 0)
+		koulutusohjelmat_[indeksi].poistaOpiskelija();
+	else
+		cout << "Koulutuohjelmaa ei löytynyt" << endl;
+}
+
 int Koulu::etsiKoulutusohjelma() const
 {
 	string nimi;

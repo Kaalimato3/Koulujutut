@@ -1,4 +1,5 @@
 #include "Koulutusohjelma.h"
+using std::vector; using std::endl; using std::cout;
 
 
 
@@ -55,6 +56,24 @@ void Koulutusohjelma::tulostaOpiskelijat() const
 	{
 		opiskelijat_[i].tulosta();
 	}
+}
+
+void Koulutusohjelma::poistaOpiskelija()
+{
+	int indeksi = etsiOpiskelija();
+	if (indeksi >= 0)
+		opiskelijat_.erase(opiskelijat_.begin() + indeksi);
+	else
+		cout << "Opiskelijaa ei löydy" << endl;
+}
+
+void Koulutusohjelma::poistaOpettaja()
+{
+	int indeksi = etsiOpettaja();
+	if (indeksi >= 0)
+		opettajat_.erase(opettajat_.begin() + indeksi);
+	else
+		cout << "Opettajaa ei löydy" << endl;
 }
 
 int Koulutusohjelma::etsiOpiskelija() const

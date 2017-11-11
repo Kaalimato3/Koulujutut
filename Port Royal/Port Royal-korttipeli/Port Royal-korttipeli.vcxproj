@@ -113,6 +113,22 @@
     <Text Include="Konsepti.txt" />
     <Text Include="Tiedot.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HenkiloKortti.h" />
+    <ClInclude Include="Kortti.h" />
+    <ClInclude Include="LaivaKortti.h" />
+    <ClInclude Include="Pelaaja.h" />
+    <ClInclude Include="Peli.h" />
+    <ClInclude Include="VerotusKortti.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HenkiloKortti.cpp" />
+    <ClCompile Include="Kortti.cpp" />
+    <ClCompile Include="LaivaKortti.cpp" />
+    <ClCompile Include="Pelaaja.cpp" />
+    <ClCompile Include="Peli.cpp" />
+    <ClCompile Include="VerotusKortti.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

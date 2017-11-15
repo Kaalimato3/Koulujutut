@@ -112,10 +112,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Atkluokka.h" />
+    <ClInclude Include="Labraluokka.h" />
     <ClInclude Include="Luokka.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Atkluokka.cpp" />
+    <ClCompile Include="Labraluokka.cpp" />
     <ClCompile Include="Luokka.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

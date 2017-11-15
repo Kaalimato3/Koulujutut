@@ -32,3 +32,9 @@ Atkluokka & Atkluokka::operator++()
 	pcmaara_++;
 	return *this;
 }
+
+void Atkluokka::tulosta() const
+{
+	Luokka::tulosta();
+	cout << "PCmaara: " << pcmaara_ << endl;
+}

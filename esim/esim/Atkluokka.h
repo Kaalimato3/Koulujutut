@@ -11,6 +11,7 @@ public:
 
 	Atkluokka & operator = (const Atkluokka & vanha);
 	Atkluokka & operator ++ ();
+	void tulosta() const;
 
 private:
 

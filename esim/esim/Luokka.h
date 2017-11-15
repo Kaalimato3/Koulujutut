@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-using std::string;
+#include <iostream>
+using std::string; using std::cout; using std::endl;
 
 class Luokka
 {
@@ -14,6 +15,7 @@ public:
 	//sijoitusoperaattori
 	Luokka & operator = (const Luokka & vanha);
 
+	virtual void tulosta() const;
 private:
 	string nimi_;
 };

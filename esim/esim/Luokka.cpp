@@ -26,3 +26,8 @@ Luokka & Luokka::operator=(const Luokka & vanha)
 	}
 	return *this;
 }
+
+void Luokka::tulosta() const
+{
+	cout << "Luokka: " << nimi_ << endl;
+}

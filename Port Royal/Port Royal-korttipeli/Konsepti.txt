@@ -76,3 +76,35 @@ Pelaajat
 	-Kortit (Vector Kortti-tyypeistä)
 	-Miekat (int)
 	-Voittopisteet (int)
+
+
+Pelirakenne:
+Loop jossa käydään kaikki pelaajat läpi järjestyksessä (Nostovuoro)
+	Jokaisen nostovuorolla vuorolla käydään läpi järjestyksessä kaikki pelaajat (Ostovuorot)
+
+Nostovuoron rakenne
+Nostetaan kortteja pöytään kunnes vuorossa oleva pelaaja ei enää halua nostaa tai tulee kaksi samanväristä laivaa
+Jos kaksi samanväristä laivaa -> pöytä tyhjätään ja vuoro siirtyy
+
+Kortti:
+	alalajit:
+	Laivakortti
+		ominaisuudet:
+			miekat
+			arvo
+			väri (Punainen, sininen, vihreä, musta, keltainen)
+	Henkilökortti/kädessä olevat kortit
+		ominaisuudet:
+			Voittopisteet (int)
+		alalajit:
+		QuestHenkilö
+		Trader
+			ominaisuudet:
+				väri
+		Admiral
+		Jester
+		Pirate/Sailor
+			ominaisuus: miekat (int)
+		ValmisQuest
+	Quest kortti
+	Verokortti

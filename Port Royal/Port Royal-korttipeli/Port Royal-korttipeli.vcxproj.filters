@@ -22,4 +22,44 @@
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Peli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pelaaja.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kortti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LaivaKortti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HenkiloKortti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VerotusKortti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Peli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pelaaja.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kortti.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LaivaKortti.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HenkiloKortti.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VerotusKortti.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

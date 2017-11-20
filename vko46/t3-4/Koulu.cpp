@@ -38,7 +38,7 @@ void Koulu::lisaaKoulutusohjelma()
 
 void Koulu::tulostaKoulutusohjelmat() const
 {
-	for (int i = 0; i < koulutusohjelmat_.size(); i++)
+	for (size_t i = 0; i < koulutusohjelmat_.size(); i++)
 	{
 		cout << koulutusohjelmat_[i].annaNimi() << endl;
 	}
@@ -119,9 +119,14 @@ int Koulu::etsiKoulutusohjelma() const
 	string nimi;
 	cout << "Anna etsittävän koulutusohjelman nimi: ";
 	getline(cin, nimi);
+	return etsiKoulutusohjelma(nimi); // ei löytynyt, palautetaan -1
+}
+
+int Koulu::etsiKoulutusohjelma(string s) const
+{
 	for (unsigned int i = 0; i<koulutusohjelmat_.size(); i++)
 	{
-		if (nimi == koulutusohjelmat_[i].annaNimi())
+		if (s == koulutusohjelmat_[i].annaNimi())
 		{
 			return i;
 		}
@@ -139,24 +144,82 @@ void Koulu::tallennaTiedot() const
 
 void Koulu::lueTiedot()
 {
-	string line;
+	string line, column;
+	stringstream sstream;
 	ifstream myfile("Opettaja.csv");
+	string tiedotOpettaja[8];
+	string tiedotOpiskelija[6];
+	Koulutusohjelma uusiOhjelma;
+	int i = 0, indeksi = -1;
+
 	if (myfile.is_open())
 	{
 		while (getline(myfile, line))
 		{
-			cout << line << '\n';
+			sstream << line;
+			while (getline(sstream, column, ';'))
+			{
+				tiedotOpettaja[i] = column;
+				i++;
+				if (i == 8)
+				{
+					i = 0;
+					
+					indeksi = etsiKoulutusohjelma(tiedotOpettaja[0]);
+
+					if (!(indeksi >= 0)) // Onko kyseistä koulutusohjelmaa olemassa, jos ei luodaan uusi
+					{
+						uusiOhjelma.asetaNimi(tiedotOpettaja[0]);
+						koulutusohjelmat_.push_back(uusiOhjelma);
+						indeksi = etsiKoulutusohjelma(tiedotOpettaja[0]);
+						// Nyt indeksi osoittaa olemassa olevaan koulutusohjelmaan
+					}
+
+					koulutusohjelmat_[indeksi].lisaaOpettaja(tiedotOpettaja[1], tiedotOpettaja[2], tiedotOpettaja[3],
+						tiedotOpettaja[4], tiedotOpettaja[5], atof(tiedotOpettaja[6].c_str()), tiedotOpettaja[7]);
+				}
+			}
+			sstream.clear();
 		}
 	}
+	else
+		cout << "Tiedoston avaaminen ei onnistunut." << endl;
 	myfile.close();
 
+	
 	myfile.open("Opiskelija.csv");
 	if (myfile.is_open())
 	{
 		while (getline(myfile, line))
 		{
-			cout << line << '\n';
+			sstream << line;
+			while (getline(sstream, column, ';'))
+			{
+				tiedotOpiskelija[i] = column;
+				i++;
+				if (i == 6)
+				{
+					i = 0;
+
+					indeksi = etsiKoulutusohjelma(tiedotOpiskelija[0]);
+
+					if (!(indeksi >= 0)) // Onko kyseistä koulutusohjelmaa olemassa, jos ei luodaan uusi
+					{
+						uusiOhjelma.asetaNimi(tiedotOpiskelija[0]);
+						koulutusohjelmat_.push_back(uusiOhjelma);
+						indeksi = etsiKoulutusohjelma(tiedotOpiskelija[0]);
+						// Nyt indeksi osoittaa olemassa olevaan koulutusohjelmaan
+					}
+
+					koulutusohjelmat_[indeksi].lisaaOpiskelija(tiedotOpiskelija[1], tiedotOpiskelija[2], tiedotOpiskelija[3],
+						tiedotOpiskelija[4], tiedotOpiskelija[5]);
+				}
+			}
+			sstream.clear();
 		}
 	}
+	else
+		cout << "Tiedoston avaaminen ei onnistunut." << endl;
+	myfile.close();
 
 }

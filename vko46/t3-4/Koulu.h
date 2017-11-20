@@ -3,9 +3,10 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include "Koulutusohjelma.h"
 using std::vector; using std::string;
-using std::ifstream;
+using std::ifstream; using std::stringstream;
 class Koulu
 {
 public:
@@ -34,6 +35,7 @@ public:
 	void poistaOpiskelija();
 
 	int etsiKoulutusohjelma() const;
+	int etsiKoulutusohjelma(string s) const;
 
 	void tallennaTiedot() const;
 	void lueTiedot();

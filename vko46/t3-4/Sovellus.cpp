@@ -22,7 +22,6 @@ void Sovellus::aja() const
 	{
 		valinta = tulostaValikko();
 
-
 		if(valinta == "0")
 		{
 

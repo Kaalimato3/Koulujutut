@@ -24,7 +24,11 @@ public:
 	void asetaNimi(string nimi);
 
 	void lisaaOpettaja();
+	void lisaaOpettaja(Opettaja opettaja);
+	void lisaaOpettaja(string etunimi, string sukunimi, string osoite, string puhelinnumero, string tunnus, float palkka, string opetusala);
 	void lisaaOpiskelija();
+	void lisaaOpiskelija(Opiskelija opiskelija);
+	void lisaaOpiskelija(string etunimi, string sukunimi, string osoite, string puhelinnumero, string opiskelijanumero);
 	void tulostaOpettajat() const;
 	void tulostaOpiskelijat() const;
 

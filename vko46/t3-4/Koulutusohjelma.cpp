@@ -42,6 +42,28 @@ void Koulutusohjelma::lisaaOpiskelija()
 	opiskelijat_.push_back(uusOpiskelija);
 }
 
+void Koulutusohjelma::lisaaOpettaja(Opettaja opettaja)
+{
+	opettajat_.push_back(opettaja);
+}
+
+void Koulutusohjelma::lisaaOpettaja(string etunimi, string sukunimi, string osoite, string puhelinnumero, string tunnus, float palkka, string opetusala)
+{
+	Opettaja opettaja(etunimi, sukunimi, osoite, puhelinnumero, tunnus, palkka, opetusala);
+	opettajat_.push_back(opettaja);
+}
+
+void Koulutusohjelma::lisaaOpiskelija(Opiskelija opiskelija)
+{
+	opiskelijat_.push_back(opiskelija);
+}
+
+void Koulutusohjelma::lisaaOpiskelija(string etunimi, string sukunimi, string osoite, string puhelinnumero, string opiskelijanumero)
+{
+	Opiskelija opiskelija(etunimi, sukunimi, osoite, puhelinnumero, opiskelijanumero);
+	opiskelijat_.push_back(opiskelija);
+}
+
 void Koulutusohjelma::tulostaOpettajat() const
 {
 	for (unsigned int i = 0; i < opettajat_.size(); i++)
@@ -110,13 +132,12 @@ void Koulutusohjelma::tallennaHenkilot() const
 {
 	ofstream filu;
 	// Kirjoitetaan opettajat tiedostoon
-	filu.open("Opettaja.csv");
+	filu.open("Opettaja.csv", std::fstream::app);
 	for (size_t i = 0; i < opettajat_.size(); i++)
 	{
 		filu << nimi_ << ";"
 			<< opettajat_[i].annaEtunimi() << ";"
 			<< opettajat_[i].annaSukunimi() << ";"
-			<< opettajat_[i].annaEtunimi() << ";"
 			<< opettajat_[i].annaOsoite() << ";"
 			<< opettajat_[i].annaPuhelinnumero() << ";"
 			<< opettajat_[i].annaTunnus() << ";"
@@ -126,7 +147,7 @@ void Koulutusohjelma::tallennaHenkilot() const
 	}
 	filu.close();
 	// Kirjoitetaan opiskelijat tiedostoon
-	filu.open("Opiskelija.csv");
+	filu.open("Opiskelija.csv", std::fstream::app);
 	for (size_t i = 0; i < opiskelijat_.size(); i++)
 	{
 		filu << nimi_ << ";"

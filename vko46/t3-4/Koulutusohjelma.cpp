@@ -128,11 +128,9 @@ int Koulutusohjelma::etsiOpettaja() const
 	return -1; // ei löytynyt, palautetaan -1
 }
 
-void Koulutusohjelma::tallennaHenkilot() const
+void Koulutusohjelma::tallennaOpettajat(ofstream& filu) const
 {
-	ofstream filu;
 	// Kirjoitetaan opettajat tiedostoon
-	filu.open("Opettaja.csv", std::fstream::app);
 	for (size_t i = 0; i < opettajat_.size(); i++)
 	{
 		filu << nimi_ << ";"
@@ -145,9 +143,11 @@ void Koulutusohjelma::tallennaHenkilot() const
 			<< opettajat_[i].annaOpetusala() << ";"
 			<< endl;
 	}
-	filu.close();
+}
+
+void Koulutusohjelma::tallennaOpiskelijat(ofstream& filu) const
+{
 	// Kirjoitetaan opiskelijat tiedostoon
-	filu.open("Opiskelija.csv", std::fstream::app);
 	for (size_t i = 0; i < opiskelijat_.size(); i++)
 	{
 		filu << nimi_ << ";"
@@ -158,5 +158,4 @@ void Koulutusohjelma::tallennaHenkilot() const
 			<< opiskelijat_[i].annaOpiskelijanumero() << ";"
 			<< endl;
 	}
-	filu.close();
 }

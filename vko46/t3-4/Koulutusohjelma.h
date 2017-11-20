@@ -38,7 +38,8 @@ public:
 	int etsiOpiskelija() const;
 	int etsiOpettaja() const;
 
-	void tallennaHenkilot() const;
+	void tallennaOpettajat(ofstream& filu) const;
+	void tallennaOpiskelijat(ofstream& filu) const;
 
 private:
 	string nimi_;

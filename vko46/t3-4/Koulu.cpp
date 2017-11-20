@@ -136,10 +136,27 @@ int Koulu::etsiKoulutusohjelma(string s) const
 
 void Koulu::tallennaTiedot() const
 {
-	for (size_t i = 0; i < koulutusohjelmat_.size(); i++)
+	ofstream filu;
+
+	filu.open("Opettaja.csv");
+	if (filu.is_open())
 	{
-		koulutusohjelmat_[i].tallennaHenkilot();
+		for (size_t i = 0; i < koulutusohjelmat_.size(); i++)
+		{
+			koulutusohjelmat_[i].tallennaOpettajat(filu);
+		}
 	}
+	filu.close();
+
+	filu.open("Opiskelija.csv");
+	if (filu.is_open())
+	{
+		for (size_t i = 0; i < koulutusohjelmat_.size(); i++)
+		{
+			koulutusohjelmat_[i].tallennaOpiskelijat(filu);
+		}
+	}
+	filu.close();
 }
 
 void Koulu::lueTiedot()

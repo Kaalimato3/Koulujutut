@@ -14,6 +14,5 @@ int main()
 	cout << "Pallon tilavuus: " << pallop->tilavuus() << endl;
 	cout << "Pyramidin tilavuus: " << pyramidip->tilavuus() << endl;
 
-	system("pause");
 	return 0;
 }

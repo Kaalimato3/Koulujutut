@@ -46,5 +46,7 @@ public:
 private:
 	string nimi_;
 	vector <Koulutusohjelma> koulutusohjelmat_;
+	bool opettajaTiedotLuettu_;
+	bool opiskelijaTiedotLuettu_;
 };
 

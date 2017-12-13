@@ -1,7 +1,9 @@
 #include "Sovellus.h"
 #include <iostream>
+#include <exception>
 
 using std::cin; using std::cout; using std::getline; using std::endl;
+using std::exception;
 
 Sovellus::Sovellus()
 {
@@ -22,7 +24,7 @@ void Sovellus::aja() const
 	{
 		valinta = tulostaValikko();
 
-		if(valinta == "0")
+		if (valinta == "0")
 		{
 
 		}

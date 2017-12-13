@@ -149,10 +149,16 @@ void Koulu::vaihdaKoulutusohjelmanNimi()
 
 void Koulu::paivitaOpettajanTiedot()
 {
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi >= 0)
+		koulutusohjelmat_[indeksi].paivitaOpettajanTiedot();
 }
 
 void Koulu::paivitaOpiskelijanTiedot()
 {
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi >= 0)
+		koulutusohjelmat_[indeksi].paivitaOpiskelijanTiedot();
 }
 
 void Koulu::tallennaTiedot() const

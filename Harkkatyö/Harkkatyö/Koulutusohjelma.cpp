@@ -98,6 +98,20 @@ void Koulutusohjelma::poistaOpettaja()
 		cout << "Opettajaa ei löydy" << endl;
 }
 
+void Koulutusohjelma::paivitaOpettajanTiedot()
+{
+	int indeksi = etsiOpettaja();
+	if (indeksi >= 0)
+		opettajat_[indeksi].kysyTiedot();
+}
+
+void Koulutusohjelma::paivitaOpiskelijanTiedot()
+{
+	int indeksi = etsiOpiskelija();
+	if (indeksi >= 0)
+		opiskelijat_[indeksi].kysyTiedot();
+}
+
 int Koulutusohjelma::etsiOpiskelija() const
 {
 	string nro;

@@ -72,11 +72,11 @@ void Sovellus::aja() const
 		}
 		else if (valinta == "12")
 		{
-
+			koulu.paivitaOpettajanTiedot();
 		}
 		else if (valinta == "13")
 		{
-
+			koulu.paivitaOpiskelijanTiedot();
 		}
 		else if (valinta == "14")
 		{
@@ -103,7 +103,7 @@ string Sovellus::tulostaValikko() const
 	cout << "4. Lisää opettaja koulutusohjelmaan" << endl;
 	cout << "5. Tulosta koulutusohjelman opettajat" << endl;
 	cout << "6. Lisää opiskelija koulutusohjelmaan" << endl;
-	cout << "7. Tulosta koulutusohjelman opiskelija" << endl;
+	cout << "7. Tulosta koulutusohjelman opiskelijat" << endl;
 	cout << "8. Poista koulutusohjelma" << endl;
 	cout << "9. Poista opettaja koulutusohjelmasta" << endl;
 	cout << "10. Poista opiskelija koulutusohjelmasta" << endl;

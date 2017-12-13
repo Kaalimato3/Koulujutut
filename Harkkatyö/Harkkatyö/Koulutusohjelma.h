@@ -34,6 +34,8 @@ public:
 
 	void poistaOpiskelija();
 	void poistaOpettaja();
+	void paivitaOpettajanTiedot();
+	void paivitaOpiskelijanTiedot();
 
 	int etsiOpiskelija() const;
 	int etsiOpettaja() const;
